@@ -57,7 +57,16 @@
   }
 }
 
+.input-validate {
+  &.not-validate {
+    &::placeholder {
+      color: red;
+    }
+  }
+}
+
 .input-wrapper {
+  position: relative;
   background: #F9F9F9;
   padding: 13px 24px;
   border-radius: 10px;
@@ -175,8 +184,10 @@ input {
     position: absolute;
     left: 0;
     top: 4px;
-    width: 23px;
-    height: 23px;
+    min-width: 23px;
+    min-height: 23px;
+    max-width: 23px;
+    max-height: 23px;
     border: 1px solid $color-grey-2;
     border-radius: 100%;
     background: transparent;
@@ -184,12 +195,14 @@ input {
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
     content: '';
-    width: 11px;
-    height: 11px;
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
     background: $color-grey-2;
     position: absolute;
-    top: 12px;
-    left: 5.7px;
+    top: 11px;
+    left: 6px;
     border-radius: 100px;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
