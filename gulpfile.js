@@ -47,9 +47,6 @@ const stylesBuild = () => {
     .pipe(sass({
       outputStyle: 'expanded'
     }).on('error', notify.onError()))
-    .pipe(rename({
-      suffix: '.min'
-    }))
     .pipe(autoprefixer({
       cascade: false,
     }))
