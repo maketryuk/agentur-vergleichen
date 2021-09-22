@@ -1,0 +1,242 @@
+.steps {
+  padding: 80px 0;
+  span {
+    display: block;
+    color: $color-grey-2;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.48;
+    margin-bottom: 30px;
+  }
+  &-buttons {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .btn-primary,
+  .btn-outline {
+    max-width: 200px;
+    width: 100%;
+  }
+  .btn-outline {
+    margin-right: auto;
+  }
+  &-table {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    margin: -15px;
+  }
+  &-wrapper {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    padding: 15px;
+  }
+  &-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F9F9F9;
+    padding: 36px 20px;
+    border-radius: 10px;
+    &__image {
+      max-height: 90px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-radio {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 20px;
+    }
+  }
+}
+
+.input-wrapper {
+  background: #F9F9F9;
+  padding: 13px 24px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+input {
+  color: $color-grey-2;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.9;
+  &::placeholder {
+    color: #6E6E6E;
+    opacity: 0.7;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: -15px -30px;
+  .form-wrapper {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px 30px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    &.w-50 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  p {
+    color: #6E6E6E;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.95;
+    a {
+      color: $color-green;
+    }
+  }
+  input {
+    padding: 13px 24px;
+    border-radius: 10px;
+    background: #F9F9F9;
+  }
+  .btn-primary {
+    max-width: 100%;
+  }
+}
+
+.form-group {
+  margin-top: 8px;
+  margin-right: 16px;
+  input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+    &:checked + label:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 8px;
+      width: 6px;
+      height: 13px;
+      border: solid $color-green;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+  label {
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content: '';
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 1px solid $color-grey-2;
+      padding: 9.5px;
+      border-radius: 5px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+  }
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    color: $color-grey-2;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.95;
+    display: inline-block;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 23px;
+    height: 23px;
+    border: 1px solid $color-grey-2;
+    border-radius: 100%;
+    background: transparent;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 11px;
+    height: 11px;
+    background: $color-grey-2;
+    position: absolute;
+    top: 12px;
+    left: 5.7px;
+    border-radius: 100px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+// Media 768px //
+@media screen and (max-width: 768px) {
+  .steps {
+    padding: 60px 0;
+    &-wrapper {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    &-card {
+      max-width: 360px;
+      margin: 0 auto;
+    }
+    &-buttons {
+      justify-content: space-between;
+    }
+    .btn-outline {
+      margin-right: 16px;
+    }
+  }
+  .form-group {
+    margin-right: 8px;
+  }
+}
+
+// Media 640px //
+@media screen and (max-width: 640px) {
+  .contact-form {
+    .form-wrapper {
+      &.w-50 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

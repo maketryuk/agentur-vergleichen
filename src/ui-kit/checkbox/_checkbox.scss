@@ -1,11 +1,11 @@
 // Checkbox //
-$checkmark-bg: rgb(0, 0, 0);
+$checkmark-bg: transparent;
 $checkmark-bg-hover: rgba(0, 0, 0, 0.3);
-$checkmark-bg-active: rgb(255, 0, 0);
-$checkmark-arrow: rgb(0, 0, 255);
+$checkmark-bg-active: transparent;
+$checkmark-arrow: $color-green;
 
-$checkmark-width: 25px;
-$checkmark-height: 25px;
+$checkmark-width: 23px;
+$checkmark-height: 23px;
 
 $checkmark-arrow-top: 4px;
 $checkmark-arrow-left: 8px;
@@ -54,6 +54,7 @@ $checkbox-margin: 20px;
       width: $checkmark-width;
       background-color: $checkmark-bg;
       transition: $checkmark-transition;
+      border-radius: 5px;
       &::after {
         content: "";
         position: absolute;

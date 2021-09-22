@@ -10,7 +10,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "ask", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: $color-background;
 }
 
@@ -20,6 +20,14 @@ img {
 
 a {
   text-decoration: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 input,
@@ -50,17 +58,106 @@ ul {
   overflow: hidden;
 }
 
-.btn-reset {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  padding: 0;
-}
-
 .container {
-  max-width: 1640px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
+  &.hidden {
+    display: none;
+  }
+  &.show {
+    display: block;
+  }
 }
 
 // Custom //
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: $color-white;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h2 {
+  color: $color-white;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+h4 {
+  color: $color-grey-2;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-green;
+  color: $color-white;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+  border: 2px solid $color-green;
+  border-radius: 10px;
+  padding: 18px 5px;
+  &:hover {
+    background: transparent;
+    color: $color-green;
+  }
+  &:focus {
+    background: transparent;
+    color: $color-green;
+  }
+  &:active {
+    background: transparent;
+    color: $color-green;
+  }
+  &.disabled {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.btn-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  height: 60px;
+  color: $color-green;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+  border: 2px solid $color-green;
+  border-radius: 10px;
+  padding: 18px 5px;
+  &:hover {
+    background: $color-green;
+    color: $color-white;
+  }
+  &:focus {
+    background: $color-green;
+    color: $color-white;
+  }
+  &:active {
+    background: $color-green;
+    color: $color-white;
+  }
+  &.disabled {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
