@@ -1,4 +1,5 @@
 .steps {
+  position: relative;
   padding: 80px 0;
   span {
     display: block;
@@ -58,6 +59,10 @@
   }
 }
 
+._error {
+  box-shadow: 0 0 15px red;
+}
+
 .input-validate {
   &.not-validate {
     &::placeholder {
@@ -102,15 +107,6 @@ input {
       max-width: 50%;
     }
   }
-  p {
-    color: #6E6E6E;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.95;
-    a {
-      color: $color-green;
-    }
-  }
   input {
     padding: 13px 24px;
     border-radius: 10px;
@@ -124,18 +120,20 @@ input {
 .form-group {
   margin-top: 8px;
   margin-right: 16px;
+  position: relative;
   input {
     padding: 0;
     height: initial;
     width: initial;
     margin-bottom: 0;
-    display: none;
+    display: inline-block;
+    opacity: 0;
     cursor: pointer;
     &:checked + label:after {
       content: '';
       display: block;
       position: absolute;
-      top: 3px;
+      top: 7px;
       left: 8px;
       width: 6px;
       height: 13px;
@@ -146,7 +144,13 @@ input {
   }
   label {
     position: relative;
+    padding-left: 40px;
+    display: flex;
     cursor: pointer;
+    color: #6E6E6E;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.95;
     &::before {
       content: '';
       -webkit-appearance: none;
@@ -155,11 +159,21 @@ input {
       padding: 9.5px;
       border-radius: 5px;
       display: inline-block;
-      position: relative;
+      position: absolute;
+      top: 5px;
+      left: 0;
       vertical-align: middle;
       cursor: pointer;
       margin-right: 5px;
     }
+  }
+}
+
+.form-send {
+  &.submitted {
+    pointer-events: none;
+    background: transparent;
+    color: $color-green;
   }
 }
 
@@ -239,7 +253,9 @@ input {
     }
   }
   .form-group {
-    margin-right: 8px;
+    label {
+      padding-left: 31px;
+    }
   }
 }
 
