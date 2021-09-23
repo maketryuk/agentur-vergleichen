@@ -164,7 +164,6 @@ $(function () {
     $(this).parent().parent().removeClass("show");
     $(this).parent().parent().prev(".container").addClass("show");
   });
-
   $(".scroll-to").click(function (e) {
     e.preventDefault();
     $("html, body").animate(
@@ -174,7 +173,6 @@ $(function () {
       800
     );
   });
-
   $(".btn-next-validate").click(function () {
     if ($(".input-validate").length && $(".input-validate").val().length) {
       $(".input-validate").removeClass("not-validate");
@@ -188,11 +186,9 @@ $(function () {
       $(this).parent().parent().next(".container").removeClass("show");
     }
   });
-
   $(".steps-card").click(function () {
     $(".steps-card-radio label").removeClass("error");
   });
-
   $(".steps form").submit(function () {
     $(".submit-message").addClass("submitted");
     $('button[type="submit"]').addClass("submitted");
