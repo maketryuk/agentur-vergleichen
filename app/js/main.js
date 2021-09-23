@@ -12,10 +12,12 @@ $(function () {
       $(this).parent().parent().addClass("hidden");
       $(this).parent().parent().removeClass("show");
       $(this).parent().parent().next(".container").addClass("show");
+      $(".steps-card-radio label").removeClass("error");
     } else {
       $(this).parent().parent().removeClass("hidden");
       $(this).parent().parent().addClass("show");
       $(this).parent().parent().next(".container").removeClass("show");
+      $(".steps-card-radio label").addClass("error");
     }
   });
   $(".step-3-btn").click(function () {
@@ -23,10 +25,12 @@ $(function () {
       $(this).parent().parent().addClass("hidden");
       $(this).parent().parent().removeClass("show");
       $(this).parent().parent().next(".container").addClass("show");
+      $(".steps-card-radio label").removeClass("error");
     } else {
       $(this).parent().parent().removeClass("hidden");
       $(this).parent().parent().addClass("show");
       $(this).parent().parent().next(".container").removeClass("show");
+      $(".steps-card-radio label").addClass("error");
     }
   });
   $(".step-4-btn").click(function () {
@@ -34,10 +38,12 @@ $(function () {
       $(this).parent().parent().addClass("hidden");
       $(this).parent().parent().removeClass("show");
       $(this).parent().parent().next(".container").addClass("show");
+      $(".steps-card-radio label").removeClass("error");
     } else {
       $(this).parent().parent().removeClass("hidden");
       $(this).parent().parent().addClass("show");
       $(this).parent().parent().next(".container").removeClass("show");
+      $(".steps-card-radio label").addClass("error");
     }
   });
   $(".step-5-btn").click(function () {
@@ -45,10 +51,12 @@ $(function () {
       $(this).parent().parent().addClass("hidden");
       $(this).parent().parent().removeClass("show");
       $(this).parent().parent().next(".container").addClass("show");
+      $(".steps-card-radio label").removeClass("error");
     } else {
       $(this).parent().parent().removeClass("hidden");
       $(this).parent().parent().addClass("show");
       $(this).parent().parent().next(".container").removeClass("show");
+      $(".steps-card-radio label").addClass("error");
     }
   });
   $(".step-6-btn").click(function () {
@@ -56,10 +64,12 @@ $(function () {
       $(this).parent().parent().addClass("hidden");
       $(this).parent().parent().removeClass("show");
       $(this).parent().parent().next(".container").addClass("show");
+      $(".steps-card-radio label").removeClass("error");
     } else {
       $(this).parent().parent().removeClass("hidden");
       $(this).parent().parent().addClass("show");
       $(this).parent().parent().next(".container").removeClass("show");
+      $(".steps-card-radio label").addClass("error");
     }
   });
   $(".step-7-btn").click(function () {
@@ -67,10 +77,12 @@ $(function () {
       $(this).parent().parent().addClass("hidden");
       $(this).parent().parent().removeClass("show");
       $(this).parent().parent().next(".container").addClass("show");
+      $(".steps-card-radio label").removeClass("error");
     } else {
       $(this).parent().parent().removeClass("hidden");
       $(this).parent().parent().addClass("show");
       $(this).parent().parent().next(".container").removeClass("show");
+      $(".steps-card-radio label").addClass("error");
     }
   });
 
@@ -177,8 +189,13 @@ $(function () {
     }
   });
 
+  $(".steps-card").click(function () {
+    $(".steps-card-radio label").removeClass("error");
+  });
+
   $(".steps form").submit(function () {
-    $(".form-send").text("Form was submitted").addClass("submitted");
+    $(".submit-message").addClass("submitted");
+    $('button[type="submit"]').addClass("submitted");
     return false;
   });
 

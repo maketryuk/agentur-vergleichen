@@ -11,10 +11,12 @@ $(function () {
       $(this).parent().parent().addClass('hidden');
       $(this).parent().parent().removeClass('show');
       $(this).parent().parent().next('.container').addClass('show');
+      $('.steps-card-radio label').removeClass('error');
     } else {
       $(this).parent().parent().removeClass('hidden');
       $(this).parent().parent().addClass('show');
       $(this).parent().parent().next('.container').removeClass('show');
+      $('.steps-card-radio label').addClass('error');
     }
   })
 
@@ -23,10 +25,12 @@ $(function () {
       $(this).parent().parent().addClass('hidden');
       $(this).parent().parent().removeClass('show');
       $(this).parent().parent().next('.container').addClass('show');
+      $('.steps-card-radio label').removeClass('error');
     } else {
       $(this).parent().parent().removeClass('hidden');
       $(this).parent().parent().addClass('show');
       $(this).parent().parent().next('.container').removeClass('show');
+      $('.steps-card-radio label').addClass('error');
     }
   })
 
@@ -35,10 +39,12 @@ $(function () {
       $(this).parent().parent().addClass('hidden');
       $(this).parent().parent().removeClass('show');
       $(this).parent().parent().next('.container').addClass('show');
+      $('.steps-card-radio label').removeClass('error');
     } else {
       $(this).parent().parent().removeClass('hidden');
       $(this).parent().parent().addClass('show');
       $(this).parent().parent().next('.container').removeClass('show');
+      $('.steps-card-radio label').addClass('error');
     }
   })
 
@@ -47,10 +53,12 @@ $(function () {
       $(this).parent().parent().addClass('hidden');
       $(this).parent().parent().removeClass('show');
       $(this).parent().parent().next('.container').addClass('show');
+      $('.steps-card-radio label').removeClass('error');
     } else {
       $(this).parent().parent().removeClass('hidden');
       $(this).parent().parent().addClass('show');
       $(this).parent().parent().next('.container').removeClass('show');
+      $('.steps-card-radio label').addClass('error');
     }
   })
 
@@ -59,10 +67,12 @@ $(function () {
       $(this).parent().parent().addClass('hidden');
       $(this).parent().parent().removeClass('show');
       $(this).parent().parent().next('.container').addClass('show');
+      $('.steps-card-radio label').removeClass('error');
     } else {
       $(this).parent().parent().removeClass('hidden');
       $(this).parent().parent().addClass('show');
       $(this).parent().parent().next('.container').removeClass('show');
+      $('.steps-card-radio label').addClass('error');
     }
   })
 
@@ -71,10 +81,12 @@ $(function () {
       $(this).parent().parent().addClass('hidden');
       $(this).parent().parent().removeClass('show');
       $(this).parent().parent().next('.container').addClass('show');
+      $('.steps-card-radio label').removeClass('error');
     } else {
       $(this).parent().parent().removeClass('hidden');
       $(this).parent().parent().addClass('show');
       $(this).parent().parent().next('.container').removeClass('show');
+      $('.steps-card-radio label').addClass('error');
     }
   })
 
@@ -167,8 +179,13 @@ $(function () {
     }
   });
 
-  $('.steps form').submit(function() {
-    $('.form-send').text('Form was submitted').addClass('submitted');
+  $('.steps-card').click(function () {
+    $('.steps-card-radio label').removeClass('error');
+  })
+
+  $(".steps form").submit(function () {
+    $(".submit-message").addClass("submitted");
+    $('button[type="submit"]').addClass('submitted');
     return false;
   });
 })

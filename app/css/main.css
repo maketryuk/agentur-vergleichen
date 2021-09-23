@@ -568,8 +568,30 @@ h4 {
   margin-top: 20px;
 }
 
-._error {
-  box-shadow: 0 0 15px red;
+.submit-message {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #47B473;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+  border: 2px solid #47B473;
+  border-radius: 10px;
+  padding: 18px 5px;
+  width: 100%;
+  padding: 18px 30px;
+}
+
+.submit-message.submitted {
+  display: flex;
+}
+
+.form-send.submitted {
+  pointer-events: none;
+  background: transparent;
+  color: #47B473;
 }
 
 .input-validate.not-validate::-moz-placeholder {
@@ -701,12 +723,6 @@ input::placeholder {
   margin-right: 5px;
 }
 
-.form-send.submitted {
-  pointer-events: none;
-  background: transparent;
-  color: #47B473;
-}
-
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
   position: absolute;
@@ -723,6 +739,16 @@ input::placeholder {
   font-weight: 400;
   line-height: 1.95;
   display: inline-block;
+}
+
+[type="radio"]:checked + label.error,
+[type="radio"]:not(:checked) + label.error {
+  color: #df0000;
+}
+
+[type="radio"]:checked + label.error::before,
+[type="radio"]:not(:checked) + label.error::before {
+  border-color: #df0000;
 }
 
 [type="radio"]:checked + label:before,
