@@ -1,5 +1,5 @@
 <?php
-  $to      = 'bylangstons.s@gmail.com';
+  $to      = '';
   $subject = 'agentur-vergleiche';
 
   $radio1 = $_POST['step-1'];
